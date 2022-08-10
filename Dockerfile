@@ -2,6 +2,8 @@ FROM python:latest
 
 #RUN python3 py3-pip py3-lxml py3-yarl py3-chardet py3-aiohttp py3-attrs
 
+RUN apt update && apt install clang-format
+
 RUN adduser --disabled-password --gecos "" bettercbot
 USER bettercbot
 WORKDIR /home/bettercbot
